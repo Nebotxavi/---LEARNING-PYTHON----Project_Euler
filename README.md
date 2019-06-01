@@ -1,2 +1,2 @@
 # Project_Euler
-Project Euler problems
+Project Euler problems with Python.
