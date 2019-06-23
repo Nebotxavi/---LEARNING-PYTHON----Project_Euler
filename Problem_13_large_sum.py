@@ -4,6 +4,7 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 """
 import timeit
 
+
 def process_file(path):
     with open(path, mode='r') as op:
         numbers_lines = op.readlines()
