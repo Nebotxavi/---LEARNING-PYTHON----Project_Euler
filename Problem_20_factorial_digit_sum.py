@@ -12,7 +12,7 @@ import timeit
 
 def fact_sum(n):
     total = 1
-    for num in range(n, 1, -1):  # make shorter and cleaner
+    for num in range(n, 1, -1):
         total *= num
 
     return sum([int(i) for i in list(str(total))])
