@@ -23,7 +23,7 @@ def divisors(n):
     for i in range(1, int(math.sqrt(n) + 1)):
         if n % i == 0:
             if n / i == i:
-                divs.append(n)
+                divs.append(i)
             else:
                 divs.append(i)
                 divs.append(int(n/i))
@@ -35,7 +35,7 @@ def triangle_num(limit=500):
     t_val = 1
     while True:
         t_val += t_nth
-        factors_amount = divisors2(t_val)
+        factors_amount = divisors(t_val)
         if len(factors_amount) >= limit:
             return t_val
         t_nth += 1
