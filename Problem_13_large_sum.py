@@ -3,6 +3,7 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 * See
 """
 import timeit
+import os
 
 
 def process_file(path):
@@ -18,5 +19,7 @@ def large_sum(file):
     return total[:10]
 
 
-print(f'Execution time: ' +
-      f'{(timeit.timeit(print(large_sum("files/problem_13.txt")), setup= setup1, number=1))}.')
+file = os.path.join(os.getcwd(), 'files/problem_13.txt')
+
+print(f'Execution time: '+
+      f'{timeit.timeit("print(large_sum(file))", setup="from __main__ import large_sum, file",  number=1)}.')

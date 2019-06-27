@@ -42,4 +42,4 @@ def amicable(limit=10000):
 setup1 = 'from __main__ import amicable'
 
 print(f'Execution time: ' +
-      f'{(timeit.timeit("print(amicable())", setup= setup1, number=20)/20)}.')
+      f'{(timeit.timeit("print(amicable())", setup= setup1, number=1))}.')

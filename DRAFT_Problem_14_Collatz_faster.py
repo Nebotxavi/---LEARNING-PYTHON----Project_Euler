@@ -33,7 +33,8 @@ def collatz_call(seq_amount):
         if result > max_seq:
             max_seq = result
             max_num = i
-    return(f"{max_num} with {max_seq} sequences.")
+
+    return f"{max_num} with {max_seq} sequences."
 
 
 setup1 = 'from __main__ import collatz_call'

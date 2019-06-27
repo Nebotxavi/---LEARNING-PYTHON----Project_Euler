@@ -25,8 +25,7 @@ def divisors(n):
             if n / i == i:
                 divs.append(i)
             else:
-                divs.append(i)
-                divs.append(int(n/i))
+                divs.extend([i, int(n/i)])
     return sorted(divs)
 
 
