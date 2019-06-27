@@ -43,4 +43,4 @@ def triangle_num(limit=500):
 setup1 = 'from __main__ import triangle_num'
 
 print(f'Execution time: ' +
-f'{(timeit.timeit("print(triangle_num(500))", setup= setup1, number=1))}.')
+      f'{(timeit.timeit("print(triangle_num(500))", setup= setup1, number=1))}.')
