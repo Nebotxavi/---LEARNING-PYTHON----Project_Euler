@@ -19,7 +19,7 @@ def large_sum(file):
     return total[:10]
 
 
-file = os.path.join(os.getcwd(), 'files/problem_13.txt')
+file_path = os.path.join(os.getcwd(), 'files/problem_13.txt')
 
-print(f'Execution time: '+
-      f'{timeit.timeit("print(large_sum(file))", setup="from __main__ import large_sum, file",  number=1)}.')
+print(f'Execution time: ' +
+      f'{timeit.timeit("print(large_sum(file_path))", setup="from __main__ import large_sum, file_path",  number=1)}.')
