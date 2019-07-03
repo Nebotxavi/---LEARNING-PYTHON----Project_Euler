@@ -1,6 +1,6 @@
 """
 By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
-What is the 10 001st prime number?
+What is the 10001st prime number?
 """
 import timeit
 
@@ -25,4 +25,4 @@ def st_prime(limit):
 setup1 = 'from __main__ import st_prime'
 
 print(f'Execution time: ' +
-      f'{(timeit.timeit("print(st_prime(10001))", setup= setup1, number=1))}.')
+      f'{(timeit.timeit("print(st_prime(1000000))", setup= setup1, number=1))}.')
