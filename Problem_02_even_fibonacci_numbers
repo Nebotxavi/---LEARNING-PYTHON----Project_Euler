@@ -10,18 +10,17 @@ find the sum of the even-valued terms.
 import timeit
 
 
-def sum_even_fib(limit):
-    n1 = 0
-    n2 = 1
+def sum_even_fib(limit=4000000):
+    n1, n2 = 0, 1
     result = 0
     while n2 < limit:
         new = n1 + n2
         n1 = n2
         n2 = new
-        if new % 2 == 0 and new < limit:
+        if new % 2 == 0 and new <= limit:
             result += new
     return result
 
 
 print(f'Execution time: ' +
-      f'{(timeit.timeit("print(sum_even_fib(4000000))", setup="from __main__ import sum_even_fib", number=1))}.')
+      f'{(timeit.timeit("print(sum_even_fib())", setup="from __main__ import sum_even_fib", number=1))}.')
