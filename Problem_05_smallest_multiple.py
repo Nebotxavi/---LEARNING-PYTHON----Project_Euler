@@ -8,21 +8,16 @@ import timeit
 def smallest_multiple():
     check_list = [11, 13, 14, 16, 17, 18, 19, 20]
     num = 40
-    div = 0
-
-    while div == 0:
+    while True:
         for i in check_list:
             if num % i == 0:
                 if i == 20:
-                    div = num
-                    break
+                    return num
                 else:
                     continue
             else:
                 num += 20
                 break
-
-    return div
 
 # Option 2, simple but longer execution.
 
