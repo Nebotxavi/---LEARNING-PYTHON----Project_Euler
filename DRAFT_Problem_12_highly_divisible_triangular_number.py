@@ -19,14 +19,11 @@ import math
 
 
 def divisors(n):
-    divs = []
+    divs = set()
     for i in range(1, int(math.sqrt(n) + 1)):
         if n % i == 0:
-            if n / i == i:
-                divs.append(i)
-            else:
-                divs.extend([i, int(n/i)])
-    return sorted(divs)
+            divs.update([i, int(n/i)])
+    return divs
 
 
 def triangle_num(limit=500):
