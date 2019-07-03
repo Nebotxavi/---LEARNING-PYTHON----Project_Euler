@@ -5,8 +5,7 @@ What is the largest prime factor of the number 600851475143?
 import timeit
 
 
-def prime_factor():
-    num = 600851475143
+def prime_factor(num=600851475143):
 
     while num > 1:
         if num % 2 == 0:
@@ -15,12 +14,15 @@ def prime_factor():
         else:
             for i in range(3, num + 1, 2):
                 if num % i == 0:
-                    num = num // i
+                    num //= i
                     break
     
-    return i 
+    try:
+        return i
+    except UnboundLocalError:
+        return 'The given number does not have any prime factor.'
 
-
+    
 setup1 = 'from __main__ import prime_factor'
 
 print(f'Execution time: ' +
